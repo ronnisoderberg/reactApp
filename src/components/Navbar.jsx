@@ -7,9 +7,9 @@ export default function Header() {
     return (
         <nav>
             <ul>
-                <li><NavLink exact activeClassName="active" to="/"><h1>Todo</h1></NavLink> </li>
-                <li> <NavLink exact activeClassName="active" to="/quiz">Quiz</NavLink></li>
-                <li>  <NavLink exact activeClassName="active" to="/about">About</NavLink></li>
+                <li><NavLink exact activeClassName="active" to="/">Todo</NavLink> </li>
+                <li><NavLink exact activeClassName="active" to="/quiz">Quiz</NavLink></li>
+                <li><NavLink exact activeClassName="active" to="/about">About</NavLink></li>
             </ul>
         </nav>
 

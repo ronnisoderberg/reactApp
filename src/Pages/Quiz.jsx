@@ -18,25 +18,44 @@ export function Quiz() {
     ? [data.correct_answer, ...data.incorrect_answers]
     : [];
 
-  // function RandomListOfAnswes(arr) {
-  //   let i = arr.length;
-  //   while (--i > 0) {
-  //     let randIndex = Math.floor(Math.random() * (i + 1));
-  //     [arr[randIndex], arr[i]] = [arr[i], arr[randIndex]];
-  //   }
-  //   return arr;
-  // }
+  function RandomListOfAnswes(arr) {
+    let i = arr.length;
+    while (--i > 0) {
+      let randIndex = Math.floor(Math.random() * (i + 1));
+      [arr[randIndex], arr[i]] = [arr[i], arr[randIndex]];
+    }
+    return arr;
+  }
 
+    function HandleAnswer(e) {
+      e.preventDefault();
+      console.log('You clicked submit.');
+    }
+  
+
+  
   // ---------------------------------------------------------------------------------------------
   return (
     <div>
       <h1>The question is: {decode(data.question)}</h1>
-      {allAnswers.map((ans) => (
-        <button type="button">{decode(ans)}</button>
+
+
+      { RandomListOfAnswes( allAnswers).map((ans) => (
+        <button type="button" className="button" id={decode(ans)}>{decode(ans)}</button>
       ))}
+{/* 
+<form onSubmit={handleSubmit}>
+      <button type="submit">Submit</button>
+    </form> */}
+
+
+
+
     </div>
-  );
-  
+
+
+
+);
 }
 
 // import { useState } from "react";

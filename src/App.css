@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: #1a1d21;
+  background-color: #fff1b1;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -24,7 +24,7 @@ form {
 }
 
 .formInput input {
-  color: lightgray;
+  color: rgb(5, 5, 5);
   background-color: transparent;
   border: 1px solid #555;
   border-radius: 5px;
@@ -59,9 +59,28 @@ form {
   line-height: 25px;
 }
 
+.button {
+  background-color: #ffffff00;
+  border: line;
+  color: rgb(0, 0, 0);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #555555;
+  color: white;
+}
+
+
 .todo li {
   display: flex;
-  color: #d3d3d3;
+  color: rgb(5, 5, 5);
   list-style: none;
   margin: 20px 0;
   background-color: transparent;
