@@ -10,6 +10,6 @@ The assignment follows the requirements set in it.
 
 ## Screenshot
 
-<img src="../public/screen/1.png"  width="60%" height="30%">
-<img src="../public/screen/2.png"  width="60%" height="30%">
-<img src="../public/screen/3.png"  width="60%" height="30%">
+<img src="https://github.com/ronnisoderberg/reactApp/blob/main/public/screen/1.png"  width="60%" height="30%">
+<img src="https://github.com/ronnisoderberg/reactApp/blob/main/public/screen/2.png"  width="60%" height="30%">
+<img src="https://github.com/ronnisoderberg/reactApp/blob/main/public/screen/3.png"  width="60%" height="30%">
