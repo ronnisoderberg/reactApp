@@ -18,7 +18,7 @@ export function Quiz() {
     ? [data.correct_answer, ...data.incorrect_answers]
     : [];
 
-  function RandomListOfAnswes(arr) {
+  function randomListOfAnswes(arr) {
     let i = arr.length;
     while (--i > 0) {
       let randIndex = Math.floor(Math.random() * (i + 1));
@@ -27,26 +27,46 @@ export function Quiz() {
     return arr;
   }
 
-    function HandleAnswer(e) {
-      e.preventDefault();
-      console.log('You clicked submit.');
-    }
-  
+const [rightOrWrong, setRightOrWrong] = useState("");
 
-  
-  // ---------------------------------------------------------------------------------------------
+const handelClickAnswer = (event, param) =>{
+  // console.log(event);
+  console.log(param.ans);
+  console.log(data.correct_answer);
+
+  if(param.ans===data.correct_answer){
+    setRightOrWrong("The awnser is correct")
+    console.log(rightOrWrong)
+    }
+  else{
+    setRightOrWrong("The awnser is incorrect")
+    console.log(rightOrWrong)
+    }
+
+  }
+
+  // --------------------------------------------------------------------------------------------- \\
+
   return (
     <div>
       <h1>The question is: {decode(data.question)}</h1>
 
-
-      { RandomListOfAnswes( allAnswers).map((ans) => (
-        <button type="button" className="button" id={decode(ans)}>{decode(ans)}</button>
+      
+      { randomListOfAnswes( allAnswers).map((ans) => (
+        // <button type="submit" className="button" id={decode(ans)}>{decode(ans)}</button>
+        <button key={ans} className="button" onClick={event => handelClickAnswer(event, {ans})}>
+      {decode(ans)}
+      </button>
+        
       ))}
-{/* 
-<form onSubmit={handleSubmit}>
-      <button type="submit">Submit</button>
-    </form> */}
+
+      <div><h3>{rightOrWrong}</h3></div>
+
+      
+      
+  
+
+  
 
 
 
